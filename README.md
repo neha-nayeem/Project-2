@@ -1,2 +1,9 @@
-# Project-2
-An interactive dashboard visualizing Toronto crime and neighbourhood profiles
+# Project-2 Proposal
+
+## Topic and Rationale
+
+## Datasets
+
+## Viz Inspiration
+
+## Data Flow Diagram
