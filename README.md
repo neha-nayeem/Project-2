@@ -9,6 +9,8 @@
 - [Neha Nayeem](https://github.com/neha-nayeem)
 
 ## Topic and Rationale 🌃🔪🩸📝
+#### Topic: Toronto Crime and Demographics
+
 * As residents of Toronto, we want to gain insights on Toronto safety and crime rates in different neighborhoods.
 * After completion of project 1, we are equipped with more skills that will allow us to further analyze and visualize different type of charts interactively.
 
