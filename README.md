@@ -20,6 +20,7 @@
 ## Viz Inspiration📊 📈 📉
 
 ## Data Flow Diagram🖊
+![Diagram](img/diagram.png)
 
 ## Sources 🔗
 * [Toronto Neighbourhoods GeoJson](https://github.com/jasonicarter/toronto-geojson)
