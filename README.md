@@ -18,6 +18,9 @@
 * [Toronto Neighbourhoods Ward Model](https://www.toronto.ca/city-government/data-research-maps/neighbourhoods-communities/ward-profiles/47-ward-model/)
 
 ## Viz Inspiration📊 📈 📉
+![map](img/map.png)
+![scatter-plot](img/scatter-plot.png)
+![bar-chart](img/plotly.png)
 
 ## Data Flow Diagram🖊
 ![Diagram](img/diagram.png)
