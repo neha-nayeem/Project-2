@@ -47,7 +47,7 @@ def scatter():
 
     # Get only the data for robbery, assault and break and enter
     
-    for x in collection.find({'$or': [{'MCI': 'Robbery'}, {'MCI': 'Assault'}, {'MCI': 'Break and Enter'}]}, {"_id": 0}):
+    for x in collection.find({'$or': [{'MCI': 'Robbery'}, {'MCI': 'Assault'}, {'MCI': 'Break and Enter'},{'MCI': 'bicycle theft'},{'MCI': 'Auto Theft'}]}, {"_id": 0}):
         avg_age = x["Average age"]
         income = x["  Average after-tax income of households in 2015 ($)"]
         unemployment = x["Unemployment rate"]
