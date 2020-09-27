@@ -1,0 +1,875 @@
+Neighbourhood Name,MCI,number_of_crime
+Agincourt North,Assault,77
+Agincourt North,Auto Theft,16
+Agincourt North,Break and Enter,49
+Agincourt North,Robbery,13
+Agincourt North,Theft Over,5
+Agincourt North,bicycle theft,2
+Agincourt South-Malvern West,Assault,144
+Agincourt South-Malvern West,Auto Theft,26
+Agincourt South-Malvern West,Break and Enter,61
+Agincourt South-Malvern West,Robbery,21
+Agincourt South-Malvern West,Theft Over,12
+Agincourt South-Malvern West,bicycle theft,3
+Alderwood,Assault,39
+Alderwood,Auto Theft,17
+Alderwood,Break and Enter,26
+Alderwood,Robbery,11
+Alderwood,Theft Over,10
+Alderwood,bicycle theft,3
+Annex,Assault,258
+Annex,Auto Theft,19
+Annex,Break and Enter,123
+Annex,Robbery,34
+Annex,Theft Over,20
+Annex,bicycle theft,122
+Banbury-Don Mills,Assault,86
+Banbury-Don Mills,Auto Theft,7
+Banbury-Don Mills,Break and Enter,56
+Banbury-Don Mills,Robbery,21
+Banbury-Don Mills,Theft Over,9
+Banbury-Don Mills,bicycle theft,5
+Bathurst Manor,Assault,65
+Bathurst Manor,Auto Theft,24
+Bathurst Manor,Break and Enter,34
+Bathurst Manor,Robbery,10
+Bathurst Manor,Theft Over,5
+Bathurst Manor,bicycle theft,4
+Bay Street Corridor,Assault,727
+Bay Street Corridor,Auto Theft,25
+Bay Street Corridor,Break and Enter,121
+Bay Street Corridor,Robbery,128
+Bay Street Corridor,Theft Over,44
+Bay Street Corridor,bicycle theft,320
+Bay Street Corridor,homicide,1
+Bayview Village,Assault,87
+Bayview Village,Auto Theft,14
+Bayview Village,Break and Enter,33
+Bayview Village,Robbery,13
+Bayview Village,Theft Over,5
+Bayview Village,bicycle theft,24
+Bayview Woods-Steeles,Assault,35
+Bayview Woods-Steeles,Auto Theft,18
+Bayview Woods-Steeles,Break and Enter,33
+Bayview Woods-Steeles,Theft Over,2
+Bayview Woods-Steeles,bicycle theft,1
+Bedford Park-Nortown,Assault,40
+Bedford Park-Nortown,Auto Theft,31
+Bedford Park-Nortown,Break and Enter,98
+Bedford Park-Nortown,Robbery,14
+Bedford Park-Nortown,Theft Over,9
+Bedford Park-Nortown,bicycle theft,21
+Beechborough-Greenbrook,Assault,60
+Beechborough-Greenbrook,Auto Theft,8
+Beechborough-Greenbrook,Break and Enter,12
+Beechborough-Greenbrook,Robbery,13
+Beechborough-Greenbrook,Theft Over,3
+Beechborough-Greenbrook,bicycle theft,1
+Bendale,Assault,251
+Bendale,Auto Theft,45
+Bendale,Break and Enter,56
+Bendale,Robbery,67
+Bendale,Theft Over,14
+Bendale,bicycle theft,11
+Bendale,homicide,3
+Birchcliffe-Cliffside,Assault,197
+Birchcliffe-Cliffside,Auto Theft,16
+Birchcliffe-Cliffside,Break and Enter,77
+Birchcliffe-Cliffside,Robbery,22
+Birchcliffe-Cliffside,Theft Over,6
+Birchcliffe-Cliffside,bicycle theft,22
+Black Creek,Assault,264
+Black Creek,Auto Theft,52
+Black Creek,Break and Enter,28
+Black Creek,Robbery,37
+Black Creek,Theft Over,6
+Black Creek,bicycle theft,4
+Black Creek,homicide,1
+Blake-Jones,Assault,69
+Blake-Jones,Auto Theft,4
+Blake-Jones,Break and Enter,24
+Blake-Jones,Robbery,14
+Blake-Jones,bicycle theft,12
+Blake-Jones,homicide,1
+Briar Hill-Belgravia,Assault,64
+Briar Hill-Belgravia,Auto Theft,16
+Briar Hill-Belgravia,Break and Enter,31
+Briar Hill-Belgravia,Robbery,21
+Briar Hill-Belgravia,Theft Over,5
+Briar Hill-Belgravia,bicycle theft,7
+Bridle Path-Sunnybrook-York Mills,Assault,20
+Bridle Path-Sunnybrook-York Mills,Auto Theft,12
+Bridle Path-Sunnybrook-York Mills,Break and Enter,52
+Bridle Path-Sunnybrook-York Mills,Robbery,2
+Bridle Path-Sunnybrook-York Mills,Theft Over,4
+Bridle Path-Sunnybrook-York Mills,bicycle theft,6
+Broadview North,Assault,61
+Broadview North,Auto Theft,8
+Broadview North,Break and Enter,15
+Broadview North,Robbery,14
+Broadview North,Theft Over,2
+Broadview North,bicycle theft,13
+Brookhaven-Amesbury,Assault,110
+Brookhaven-Amesbury,Auto Theft,28
+Brookhaven-Amesbury,Break and Enter,31
+Brookhaven-Amesbury,Robbery,26
+Brookhaven-Amesbury,Theft Over,1
+Brookhaven-Amesbury,bicycle theft,3
+Cabbagetown-South St. James Town,Assault,120
+Cabbagetown-South St. James Town,Auto Theft,8
+Cabbagetown-South St. James Town,Break and Enter,53
+Cabbagetown-South St. James Town,Robbery,24
+Cabbagetown-South St. James Town,Theft Over,7
+Cabbagetown-South St. James Town,bicycle theft,65
+Caledonia-Fairbank,Assault,80
+Caledonia-Fairbank,Auto Theft,13
+Caledonia-Fairbank,Break and Enter,13
+Caledonia-Fairbank,Robbery,24
+Caledonia-Fairbank,Theft Over,1
+Caledonia-Fairbank,bicycle theft,5
+Casa Loma,Assault,38
+Casa Loma,Auto Theft,5
+Casa Loma,Break and Enter,19
+Casa Loma,Robbery,1
+Casa Loma,Theft Over,7
+Casa Loma,bicycle theft,13
+Centennial Scarborough,Assault,47
+Centennial Scarborough,Auto Theft,5
+Centennial Scarborough,Break and Enter,19
+Centennial Scarborough,Robbery,13
+Centennial Scarborough,Theft Over,2
+Centennial Scarborough,bicycle theft,6
+Church-Yonge Corridor,Assault,537
+Church-Yonge Corridor,Auto Theft,24
+Church-Yonge Corridor,Break and Enter,144
+Church-Yonge Corridor,Robbery,114
+Church-Yonge Corridor,Theft Over,38
+Church-Yonge Corridor,bicycle theft,198
+Church-Yonge Corridor,homicide,3
+Clairlea-Birchmount,Assault,245
+Clairlea-Birchmount,Auto Theft,44
+Clairlea-Birchmount,Break and Enter,87
+Clairlea-Birchmount,Robbery,46
+Clairlea-Birchmount,Theft Over,16
+Clairlea-Birchmount,bicycle theft,7
+Clairlea-Birchmount,homicide,1
+Clanton Park,Assault,62
+Clanton Park,Auto Theft,49
+Clanton Park,Break and Enter,41
+Clanton Park,Robbery,5
+Clanton Park,Theft Over,6
+Clanton Park,bicycle theft,2
+Clanton Park,homicide,1
+Cliffcrest,Assault,108
+Cliffcrest,Auto Theft,10
+Cliffcrest,Break and Enter,57
+Cliffcrest,Robbery,24
+Cliffcrest,Theft Over,4
+Cliffcrest,bicycle theft,7
+Corso Italia-Davenport,Assault,70
+Corso Italia-Davenport,Auto Theft,7
+Corso Italia-Davenport,Break and Enter,15
+Corso Italia-Davenport,Robbery,29
+Corso Italia-Davenport,Theft Over,2
+Corso Italia-Davenport,bicycle theft,9
+Danforth,Assault,57
+Danforth,Auto Theft,5
+Danforth,Break and Enter,40
+Danforth,Robbery,17
+Danforth,Theft Over,5
+Danforth,bicycle theft,24
+Danforth,homicide,1
+Danforth East York,Assault,46
+Danforth East York,Auto Theft,12
+Danforth East York,Break and Enter,44
+Danforth East York,Robbery,5
+Danforth East York,Theft Over,4
+Danforth East York,bicycle theft,22
+Don Valley Village,Assault,134
+Don Valley Village,Auto Theft,28
+Don Valley Village,Break and Enter,64
+Don Valley Village,Robbery,20
+Don Valley Village,Theft Over,8
+Don Valley Village,bicycle theft,2
+Dorset Park,Assault,194
+Dorset Park,Auto Theft,43
+Dorset Park,Break and Enter,69
+Dorset Park,Robbery,50
+Dorset Park,Theft Over,12
+Dorset Park,bicycle theft,4
+Dovercourt-Wallace Emerson-Junction,Assault,251
+Dovercourt-Wallace Emerson-Junction,Auto Theft,29
+Dovercourt-Wallace Emerson-Junction,Break and Enter,80
+Dovercourt-Wallace Emerson-Junction,Robbery,42
+Dovercourt-Wallace Emerson-Junction,Theft Over,11
+Dovercourt-Wallace Emerson-Junction,bicycle theft,107
+Downsview-Roding-CFB,Assault,379
+Downsview-Roding-CFB,Auto Theft,88
+Downsview-Roding-CFB,Break and Enter,52
+Downsview-Roding-CFB,Robbery,52
+Downsview-Roding-CFB,Theft Over,12
+Downsview-Roding-CFB,bicycle theft,16
+Downsview-Roding-CFB,homicide,1
+Dufferin Grove,Assault,100
+Dufferin Grove,Auto Theft,7
+Dufferin Grove,Break and Enter,27
+Dufferin Grove,Robbery,21
+Dufferin Grove,Theft Over,3
+Dufferin Grove,bicycle theft,42
+Dufferin Grove,homicide,1
+East End-Danforth,Assault,168
+East End-Danforth,Auto Theft,21
+East End-Danforth,Break and Enter,79
+East End-Danforth,Robbery,41
+East End-Danforth,Theft Over,11
+East End-Danforth,bicycle theft,51
+Edenbridge-Humber Valley,Assault,29
+Edenbridge-Humber Valley,Auto Theft,29
+Edenbridge-Humber Valley,Break and Enter,46
+Edenbridge-Humber Valley,Robbery,7
+Edenbridge-Humber Valley,Theft Over,1
+Edenbridge-Humber Valley,bicycle theft,4
+Eglinton East,Assault,197
+Eglinton East,Auto Theft,22
+Eglinton East,Break and Enter,64
+Eglinton East,Robbery,40
+Eglinton East,Theft Over,6
+Eglinton East,bicycle theft,2
+Elms-Old Rexdale,Assault,61
+Elms-Old Rexdale,Auto Theft,16
+Elms-Old Rexdale,Break and Enter,9
+Elms-Old Rexdale,Robbery,18
+Elms-Old Rexdale,bicycle theft,1
+Englemount-Lawrence,Assault,122
+Englemount-Lawrence,Auto Theft,23
+Englemount-Lawrence,Break and Enter,59
+Englemount-Lawrence,Robbery,44
+Englemount-Lawrence,Theft Over,8
+Englemount-Lawrence,bicycle theft,17
+Eringate-Centennial-West Deane,Assault,66
+Eringate-Centennial-West Deane,Auto Theft,29
+Eringate-Centennial-West Deane,Break and Enter,28
+Eringate-Centennial-West Deane,Robbery,18
+Eringate-Centennial-West Deane,Theft Over,5
+Eringate-Centennial-West Deane,bicycle theft,4
+Etobicoke West Mall,Assault,50
+Etobicoke West Mall,Auto Theft,15
+Etobicoke West Mall,Break and Enter,14
+Etobicoke West Mall,Robbery,3
+Etobicoke West Mall,bicycle theft,1
+Etobicoke West Mall,homicide,1
+Flemingdon Park,Assault,153
+Flemingdon Park,Auto Theft,4
+Flemingdon Park,Break and Enter,14
+Flemingdon Park,Robbery,24
+Flemingdon Park,Theft Over,3
+Flemingdon Park,bicycle theft,4
+Forest Hill North,Assault,23
+Forest Hill North,Auto Theft,7
+Forest Hill North,Break and Enter,18
+Forest Hill North,Robbery,8
+Forest Hill North,Theft Over,2
+Forest Hill North,bicycle theft,13
+Forest Hill South,Assault,10
+Forest Hill South,Auto Theft,9
+Forest Hill South,Break and Enter,31
+Forest Hill South,Robbery,1
+Forest Hill South,Theft Over,6
+Forest Hill South,bicycle theft,9
+Glenfield-Jane Heights,Assault,306
+Glenfield-Jane Heights,Auto Theft,60
+Glenfield-Jane Heights,Break and Enter,28
+Glenfield-Jane Heights,Robbery,69
+Glenfield-Jane Heights,Theft Over,12
+Glenfield-Jane Heights,bicycle theft,10
+Glenfield-Jane Heights,homicide,1
+Greenwood-Coxwell,Assault,99
+Greenwood-Coxwell,Auto Theft,13
+Greenwood-Coxwell,Break and Enter,63
+Greenwood-Coxwell,Robbery,10
+Greenwood-Coxwell,Theft Over,7
+Greenwood-Coxwell,bicycle theft,36
+Guildwood,Assault,43
+Guildwood,Auto Theft,4
+Guildwood,Break and Enter,17
+Guildwood,Robbery,8
+Guildwood,Theft Over,1
+Guildwood,bicycle theft,6
+Henry Farm,Assault,74
+Henry Farm,Auto Theft,10
+Henry Farm,Break and Enter,13
+Henry Farm,Robbery,8
+Henry Farm,Theft Over,3
+Henry Farm,bicycle theft,2
+High Park North,Assault,90
+High Park North,Auto Theft,7
+High Park North,Break and Enter,28
+High Park North,Robbery,23
+High Park North,Theft Over,1
+High Park North,bicycle theft,46
+High Park-Swansea,Assault,109
+High Park-Swansea,Auto Theft,11
+High Park-Swansea,Break and Enter,36
+High Park-Swansea,Robbery,22
+High Park-Swansea,Theft Over,5
+High Park-Swansea,bicycle theft,55
+Highland Creek,Assault,61
+Highland Creek,Auto Theft,8
+Highland Creek,Break and Enter,34
+Highland Creek,Robbery,8
+Highland Creek,Theft Over,1
+Highland Creek,bicycle theft,15
+Hillcrest Village,Assault,41
+Hillcrest Village,Auto Theft,22
+Hillcrest Village,Break and Enter,34
+Hillcrest Village,Robbery,15
+Hillcrest Village,Theft Over,1
+Hillcrest Village,bicycle theft,3
+Humber Heights-Westmount,Assault,31
+Humber Heights-Westmount,Auto Theft,16
+Humber Heights-Westmount,Break and Enter,24
+Humber Heights-Westmount,Robbery,8
+Humber Heights-Westmount,Theft Over,4
+Humber Heights-Westmount,bicycle theft,1
+Humber Heights-Westmount,homicide,1
+Humber Summit,Assault,118
+Humber Summit,Auto Theft,60
+Humber Summit,Break and Enter,41
+Humber Summit,Robbery,23
+Humber Summit,Theft Over,19
+Humber Summit,bicycle theft,6
+Humbermede,Assault,114
+Humbermede,Auto Theft,44
+Humbermede,Break and Enter,24
+Humbermede,Robbery,24
+Humbermede,Theft Over,1
+Humbermede,bicycle theft,3
+Humbermede,homicide,1
+Humewood-Cedarvale,Assault,52
+Humewood-Cedarvale,Auto Theft,17
+Humewood-Cedarvale,Break and Enter,27
+Humewood-Cedarvale,Robbery,8
+Humewood-Cedarvale,Theft Over,5
+Humewood-Cedarvale,bicycle theft,15
+Ionview,Assault,100
+Ionview,Auto Theft,5
+Ionview,Break and Enter,17
+Ionview,Robbery,9
+Ionview,Theft Over,4
+Islington-City Centre West,Assault,215
+Islington-City Centre West,Auto Theft,136
+Islington-City Centre West,Break and Enter,104
+Islington-City Centre West,Robbery,41
+Islington-City Centre West,Theft Over,35
+Islington-City Centre West,bicycle theft,26
+Junction Area,Assault,105
+Junction Area,Auto Theft,19
+Junction Area,Break and Enter,33
+Junction Area,Robbery,8
+Junction Area,Theft Over,2
+Junction Area,bicycle theft,25
+Keelesdale-Eglinton West,Assault,48
+Keelesdale-Eglinton West,Auto Theft,15
+Keelesdale-Eglinton West,Break and Enter,14
+Keelesdale-Eglinton West,Robbery,28
+Keelesdale-Eglinton West,bicycle theft,4
+Kennedy Park,Assault,216
+Kennedy Park,Auto Theft,12
+Kennedy Park,Break and Enter,47
+Kennedy Park,Robbery,32
+Kennedy Park,Theft Over,5
+Kennedy Park,bicycle theft,5
+Kensington-Chinatown,Assault,341
+Kensington-Chinatown,Auto Theft,30
+Kensington-Chinatown,Break and Enter,81
+Kensington-Chinatown,Robbery,62
+Kensington-Chinatown,Theft Over,16
+Kensington-Chinatown,bicycle theft,129
+Kensington-Chinatown,homicide,5
+Kingsview Village-The Westway,Assault,123
+Kingsview Village-The Westway,Auto Theft,42
+Kingsview Village-The Westway,Break and Enter,34
+Kingsview Village-The Westway,Robbery,24
+Kingsview Village-The Westway,Theft Over,5
+Kingsview Village-The Westway,bicycle theft,2
+Kingsview Village-The Westway,homicide,2
+Kingsway South,Assault,26
+Kingsway South,Auto Theft,9
+Kingsway South,Break and Enter,28
+Kingsway South,Robbery,8
+Kingsway South,Theft Over,2
+Kingsway South,bicycle theft,14
+L'Amoreaux,Assault,180
+L'Amoreaux,Auto Theft,27
+L'Amoreaux,Break and Enter,49
+L'Amoreaux,Robbery,37
+L'Amoreaux,Theft Over,4
+L'Amoreaux,bicycle theft,7
+L'Amoreaux,homicide,2
+Lambton Baby Point,Assault,28
+Lambton Baby Point,Auto Theft,1
+Lambton Baby Point,Break and Enter,9
+Lambton Baby Point,Robbery,6
+Lambton Baby Point,Theft Over,1
+Lambton Baby Point,bicycle theft,6
+Lansing-Westgate,Assault,68
+Lansing-Westgate,Auto Theft,27
+Lansing-Westgate,Break and Enter,41
+Lansing-Westgate,Robbery,9
+Lansing-Westgate,Theft Over,5
+Lansing-Westgate,bicycle theft,16
+Lawrence Park North,Assault,22
+Lawrence Park North,Auto Theft,13
+Lawrence Park North,Break and Enter,27
+Lawrence Park North,Robbery,4
+Lawrence Park North,Theft Over,3
+Lawrence Park North,bicycle theft,14
+Lawrence Park South,Assault,21
+Lawrence Park South,Auto Theft,20
+Lawrence Park South,Break and Enter,45
+Lawrence Park South,Robbery,2
+Lawrence Park South,Theft Over,2
+Lawrence Park South,bicycle theft,12
+Leaside-Bennington,Assault,24
+Leaside-Bennington,Auto Theft,4
+Leaside-Bennington,Break and Enter,32
+Leaside-Bennington,Robbery,8
+Leaside-Bennington,Theft Over,2
+Leaside-Bennington,bicycle theft,38
+Little Portugal,Assault,125
+Little Portugal,Auto Theft,13
+Little Portugal,Break and Enter,39
+Little Portugal,Robbery,10
+Little Portugal,Theft Over,3
+Little Portugal,bicycle theft,41
+Little Portugal,homicide,1
+Long Branch,Assault,60
+Long Branch,Auto Theft,13
+Long Branch,Break and Enter,28
+Long Branch,Robbery,5
+Long Branch,Theft Over,1
+Long Branch,bicycle theft,10
+Malvern,Assault,283
+Malvern,Auto Theft,36
+Malvern,Break and Enter,66
+Malvern,Robbery,64
+Malvern,Theft Over,8
+Malvern,bicycle theft,8
+Malvern,homicide,4
+Maple Leaf,Assault,45
+Maple Leaf,Auto Theft,16
+Maple Leaf,Break and Enter,17
+Maple Leaf,Robbery,8
+Maple Leaf,bicycle theft,1
+Markland Wood,Assault,24
+Markland Wood,Auto Theft,13
+Markland Wood,Break and Enter,19
+Markland Wood,Robbery,11
+Markland Wood,Theft Over,2
+Markland Wood,bicycle theft,1
+Milliken,Assault,87
+Milliken,Auto Theft,34
+Milliken,Break and Enter,67
+Milliken,Robbery,40
+Milliken,Theft Over,12
+Mimico (includes Humber Bay Shores),Assault,242
+Mimico (includes Humber Bay Shores),Auto Theft,34
+Mimico (includes Humber Bay Shores),Break and Enter,48
+Mimico (includes Humber Bay Shores),Robbery,11
+Mimico (includes Humber Bay Shores),Theft Over,15
+Mimico (includes Humber Bay Shores),bicycle theft,40
+Mimico (includes Humber Bay Shores),homicide,1
+Morningside,Assault,170
+Morningside,Auto Theft,13
+Morningside,Break and Enter,19
+Morningside,Robbery,13
+Morningside,bicycle theft,3
+Moss Park,Assault,470
+Moss Park,Auto Theft,16
+Moss Park,Break and Enter,133
+Moss Park,Robbery,123
+Moss Park,Theft Over,13
+Moss Park,bicycle theft,118
+Moss Park,homicide,2
+Mount Dennis,Assault,109
+Mount Dennis,Auto Theft,14
+Mount Dennis,Break and Enter,30
+Mount Dennis,Robbery,33
+Mount Dennis,bicycle theft,3
+Mount Olive-Silverstone-Jamestown,Assault,267
+Mount Olive-Silverstone-Jamestown,Auto Theft,43
+Mount Olive-Silverstone-Jamestown,Break and Enter,34
+Mount Olive-Silverstone-Jamestown,Robbery,102
+Mount Olive-Silverstone-Jamestown,Theft Over,3
+Mount Olive-Silverstone-Jamestown,bicycle theft,10
+Mount Olive-Silverstone-Jamestown,homicide,1
+Mount Pleasant East,Assault,23
+Mount Pleasant East,Auto Theft,9
+Mount Pleasant East,Break and Enter,16
+Mount Pleasant East,Robbery,3
+Mount Pleasant East,Theft Over,1
+Mount Pleasant East,bicycle theft,20
+Mount Pleasant West,Assault,109
+Mount Pleasant West,Auto Theft,4
+Mount Pleasant West,Break and Enter,40
+Mount Pleasant West,Robbery,10
+Mount Pleasant West,Theft Over,6
+Mount Pleasant West,bicycle theft,36
+Mount Pleasant West,homicide,1
+New Toronto,Assault,100
+New Toronto,Auto Theft,10
+New Toronto,Break and Enter,41
+New Toronto,Robbery,20
+New Toronto,Theft Over,6
+New Toronto,bicycle theft,6
+New Toronto,homicide,1
+Newtonbrook East,Assault,79
+Newtonbrook East,Auto Theft,4
+Newtonbrook East,Break and Enter,41
+Newtonbrook East,Robbery,9
+Newtonbrook East,Theft Over,4
+Newtonbrook East,bicycle theft,6
+Newtonbrook East,homicide,1
+Newtonbrook West,Assault,136
+Newtonbrook West,Auto Theft,50
+Newtonbrook West,Break and Enter,54
+Newtonbrook West,Robbery,14
+Newtonbrook West,Theft Over,8
+Newtonbrook West,bicycle theft,30
+Niagara,Assault,250
+Niagara,Auto Theft,25
+Niagara,Break and Enter,69
+Niagara,Robbery,16
+Niagara,Theft Over,18
+Niagara,bicycle theft,124
+Niagara,homicide,1
+North Riverdale,Assault,53
+North Riverdale,Auto Theft,6
+North Riverdale,Break and Enter,41
+North Riverdale,Robbery,34
+North Riverdale,Theft Over,4
+North Riverdale,bicycle theft,30
+North Riverdale,homicide,1
+North St. James Town,Assault,139
+North St. James Town,Auto Theft,16
+North St. James Town,Break and Enter,54
+North St. James Town,Robbery,22
+North St. James Town,Theft Over,9
+North St. James Town,bicycle theft,61
+O'Connor-Parkview,Assault,136
+O'Connor-Parkview,Auto Theft,7
+O'Connor-Parkview,Break and Enter,34
+O'Connor-Parkview,Robbery,30
+O'Connor-Parkview,Theft Over,6
+O'Connor-Parkview,bicycle theft,7
+Oakridge,Assault,138
+Oakridge,Auto Theft,11
+Oakridge,Break and Enter,57
+Oakridge,Robbery,29
+Oakridge,Theft Over,10
+Oakridge,bicycle theft,4
+Oakwood Village,Assault,132
+Oakwood Village,Auto Theft,24
+Oakwood Village,Break and Enter,22
+Oakwood Village,Robbery,26
+Oakwood Village,Theft Over,1
+Oakwood Village,bicycle theft,18
+Old East York,Assault,37
+Old East York,Auto Theft,6
+Old East York,Break and Enter,25
+Old East York,Robbery,6
+Old East York,Theft Over,2
+Old East York,bicycle theft,1
+Old East York,homicide,1
+Palmerston-Little Italy,Assault,70
+Palmerston-Little Italy,Auto Theft,12
+Palmerston-Little Italy,Break and Enter,40
+Palmerston-Little Italy,Robbery,37
+Palmerston-Little Italy,Theft Over,8
+Palmerston-Little Italy,bicycle theft,55
+Parkwoods-Donalda,Assault,179
+Parkwoods-Donalda,Auto Theft,26
+Parkwoods-Donalda,Break and Enter,45
+Parkwoods-Donalda,Robbery,32
+Parkwoods-Donalda,Theft Over,4
+Parkwoods-Donalda,bicycle theft,7
+Pelmo Park-Humberlea,Assault,61
+Pelmo Park-Humberlea,Auto Theft,24
+Pelmo Park-Humberlea,Break and Enter,24
+Pelmo Park-Humberlea,Robbery,12
+Pelmo Park-Humberlea,Theft Over,4
+Pelmo Park-Humberlea,bicycle theft,1
+Pelmo Park-Humberlea,homicide,1
+Playter Estates-Danforth,Assault,82
+Playter Estates-Danforth,Auto Theft,6
+Playter Estates-Danforth,Break and Enter,25
+Playter Estates-Danforth,Robbery,12
+Playter Estates-Danforth,Theft Over,3
+Playter Estates-Danforth,bicycle theft,19
+Pleasant View,Assault,56
+Pleasant View,Auto Theft,8
+Pleasant View,Break and Enter,32
+Pleasant View,Robbery,13
+Pleasant View,Theft Over,2
+Pleasant View,bicycle theft,2
+Princess-Rosethorn,Assault,31
+Princess-Rosethorn,Auto Theft,24
+Princess-Rosethorn,Break and Enter,33
+Princess-Rosethorn,Robbery,30
+Princess-Rosethorn,Theft Over,3
+Princess-Rosethorn,bicycle theft,3
+Princess-Rosethorn,homicide,1
+Regent Park,Assault,98
+Regent Park,Auto Theft,4
+Regent Park,Break and Enter,26
+Regent Park,Robbery,12
+Regent Park,Theft Over,2
+Regent Park,bicycle theft,37
+Regent Park,homicide,1
+Rexdale-Kipling,Assault,80
+Rexdale-Kipling,Auto Theft,22
+Rexdale-Kipling,Break and Enter,16
+Rexdale-Kipling,Robbery,17
+Rexdale-Kipling,bicycle theft,3
+Rockcliffe-Smythe,Assault,147
+Rockcliffe-Smythe,Auto Theft,37
+Rockcliffe-Smythe,Break and Enter,37
+Rockcliffe-Smythe,Robbery,61
+Rockcliffe-Smythe,Theft Over,3
+Rockcliffe-Smythe,bicycle theft,9
+Roncesvalles,Assault,107
+Roncesvalles,Auto Theft,14
+Roncesvalles,Break and Enter,37
+Roncesvalles,Robbery,26
+Roncesvalles,Theft Over,3
+Roncesvalles,bicycle theft,26
+Rosedale-Moore Park,Assault,96
+Rosedale-Moore Park,Auto Theft,12
+Rosedale-Moore Park,Break and Enter,58
+Rosedale-Moore Park,Robbery,18
+Rosedale-Moore Park,Theft Over,7
+Rosedale-Moore Park,bicycle theft,46
+Rouge,Assault,146
+Rouge,Auto Theft,21
+Rouge,Break and Enter,75
+Rouge,Robbery,31
+Rouge,Theft Over,11
+Rouge,bicycle theft,13
+Runnymede-Bloor West Village,Assault,38
+Runnymede-Bloor West Village,Auto Theft,10
+Runnymede-Bloor West Village,Break and Enter,22
+Runnymede-Bloor West Village,Robbery,21
+Runnymede-Bloor West Village,Theft Over,1
+Runnymede-Bloor West Village,bicycle theft,18
+Rustic,Assault,65
+Rustic,Auto Theft,8
+Rustic,Break and Enter,17
+Rustic,Robbery,7
+Rustic,Theft Over,3
+Rustic,bicycle theft,3
+Scarborough Village,Assault,196
+Scarborough Village,Auto Theft,9
+Scarborough Village,Break and Enter,34
+Scarborough Village,Robbery,22
+Scarborough Village,Theft Over,2
+Scarborough Village,bicycle theft,2
+Scarborough Village,homicide,6
+South Parkdale,Assault,230
+South Parkdale,Auto Theft,23
+South Parkdale,Break and Enter,69
+South Parkdale,Robbery,41
+South Parkdale,Theft Over,12
+South Parkdale,bicycle theft,31
+South Parkdale,homicide,1
+South Riverdale,Assault,234
+South Riverdale,Auto Theft,27
+South Riverdale,Break and Enter,147
+South Riverdale,Robbery,49
+South Riverdale,Theft Over,23
+South Riverdale,bicycle theft,128
+South Riverdale,homicide,3
+St.Andrew-Windfields,Assault,49
+St.Andrew-Windfields,Auto Theft,10
+St.Andrew-Windfields,Break and Enter,57
+St.Andrew-Windfields,Robbery,14
+St.Andrew-Windfields,Theft Over,5
+St.Andrew-Windfields,bicycle theft,7
+Steeles,Assault,43
+Steeles,Auto Theft,30
+Steeles,Break and Enter,48
+Steeles,Robbery,17
+Steeles,Theft Over,3
+Steeles,bicycle theft,1
+Stonegate-Queensway,Assault,76
+Stonegate-Queensway,Auto Theft,12
+Stonegate-Queensway,Break and Enter,49
+Stonegate-Queensway,Robbery,15
+Stonegate-Queensway,Theft Over,4
+Stonegate-Queensway,bicycle theft,11
+Tam O'Shanter-Sullivan,Assault,96
+Tam O'Shanter-Sullivan,Auto Theft,22
+Tam O'Shanter-Sullivan,Break and Enter,61
+Tam O'Shanter-Sullivan,Robbery,24
+Tam O'Shanter-Sullivan,Theft Over,10
+Tam O'Shanter-Sullivan,bicycle theft,2
+Taylor-Massey,Assault,98
+Taylor-Massey,Auto Theft,7
+Taylor-Massey,Break and Enter,43
+Taylor-Massey,Robbery,16
+Taylor-Massey,Theft Over,5
+Taylor-Massey,bicycle theft,9
+Taylor-Massey,homicide,1
+The Beaches,Assault,90
+The Beaches,Auto Theft,7
+The Beaches,Break and Enter,77
+The Beaches,Robbery,19
+The Beaches,Theft Over,4
+The Beaches,bicycle theft,93
+Thistletown-Beaumond Heights,Assault,39
+Thistletown-Beaumond Heights,Auto Theft,13
+Thistletown-Beaumond Heights,Break and Enter,23
+Thistletown-Beaumond Heights,Robbery,16
+Thistletown-Beaumond Heights,Theft Over,1
+Thistletown-Beaumond Heights,bicycle theft,3
+Thorncliffe Park,Assault,85
+Thorncliffe Park,Auto Theft,4
+Thorncliffe Park,Break and Enter,24
+Thorncliffe Park,Robbery,16
+Thorncliffe Park,Theft Over,11
+Thorncliffe Park,bicycle theft,15
+Thorncliffe Park,homicide,1
+Trinity-Bellwoods,Assault,169
+Trinity-Bellwoods,Auto Theft,25
+Trinity-Bellwoods,Break and Enter,46
+Trinity-Bellwoods,Robbery,25
+Trinity-Bellwoods,Theft Over,2
+Trinity-Bellwoods,bicycle theft,69
+Trinity-Bellwoods,homicide,1
+University,Assault,126
+University,Auto Theft,13
+University,Break and Enter,49
+University,Robbery,26
+University,Theft Over,5
+University,bicycle theft,135
+Victoria Village,Assault,132
+Victoria Village,Auto Theft,20
+Victoria Village,Break and Enter,21
+Victoria Village,Robbery,13
+Victoria Village,Theft Over,4
+Victoria Village,bicycle theft,1
+Victoria Village,homicide,2
+Waterfront Communities-The Island,Assault,882
+Waterfront Communities-The Island,Auto Theft,39
+Waterfront Communities-The Island,Break and Enter,214
+Waterfront Communities-The Island,Robbery,70
+Waterfront Communities-The Island,Theft Over,56
+Waterfront Communities-The Island,bicycle theft,416
+West Hill,Assault,419
+West Hill,Auto Theft,15
+West Hill,Break and Enter,72
+West Hill,Robbery,77
+West Hill,Theft Over,7
+West Hill,bicycle theft,26
+West Humber-Clairville,Assault,308
+West Humber-Clairville,Auto Theft,316
+West Humber-Clairville,Break and Enter,130
+West Humber-Clairville,Robbery,99
+West Humber-Clairville,Theft Over,40
+West Humber-Clairville,bicycle theft,21
+West Humber-Clairville,homicide,4
+Westminster-Branson,Assault,128
+Westminster-Branson,Auto Theft,26
+Westminster-Branson,Break and Enter,20
+Westminster-Branson,Robbery,13
+Westminster-Branson,Theft Over,6
+Westminster-Branson,bicycle theft,15
+Weston,Assault,192
+Weston,Auto Theft,40
+Weston,Break and Enter,44
+Weston,Robbery,47
+Weston,Theft Over,2
+Weston,bicycle theft,7
+Weston,homicide,4
+Weston-Pelham Park,Assault,92
+Weston-Pelham Park,Auto Theft,16
+Weston-Pelham Park,Break and Enter,16
+Weston-Pelham Park,Robbery,15
+Weston-Pelham Park,Theft Over,7
+Weston-Pelham Park,bicycle theft,4
+Weston-Pelham Park,homicide,1
+Wexford/Maryvale,Assault,182
+Wexford/Maryvale,Auto Theft,43
+Wexford/Maryvale,Break and Enter,75
+Wexford/Maryvale,Robbery,28
+Wexford/Maryvale,Theft Over,11
+Wexford/Maryvale,bicycle theft,8
+Wexford/Maryvale,homicide,2
+Willowdale East,Assault,147
+Willowdale East,Auto Theft,46
+Willowdale East,Break and Enter,80
+Willowdale East,Robbery,29
+Willowdale East,Theft Over,13
+Willowdale East,bicycle theft,48
+Willowdale West,Assault,97
+Willowdale West,Auto Theft,12
+Willowdale West,Break and Enter,36
+Willowdale West,Robbery,18
+Willowdale West,Theft Over,4
+Willowdale West,bicycle theft,49
+Willowridge-Martingrove-Richview,Assault,103
+Willowridge-Martingrove-Richview,Auto Theft,48
+Willowridge-Martingrove-Richview,Break and Enter,34
+Willowridge-Martingrove-Richview,Robbery,57
+Willowridge-Martingrove-Richview,Theft Over,4
+Willowridge-Martingrove-Richview,bicycle theft,2
+Woburn,Assault,357
+Woburn,Auto Theft,32
+Woburn,Break and Enter,78
+Woburn,Robbery,67
+Woburn,Theft Over,16
+Woburn,bicycle theft,17
+Woburn,homicide,1
+Woodbine Corridor,Assault,81
+Woodbine Corridor,Auto Theft,9
+Woodbine Corridor,Break and Enter,49
+Woodbine Corridor,Robbery,7
+Woodbine Corridor,Theft Over,6
+Woodbine Corridor,bicycle theft,27
+Woodbine-Lumsden,Assault,33
+Woodbine-Lumsden,Auto Theft,1
+Woodbine-Lumsden,Break and Enter,12
+Woodbine-Lumsden,Robbery,3
+Woodbine-Lumsden,Theft Over,5
+Woodbine-Lumsden,bicycle theft,5
+Wychwood,Assault,85
+Wychwood,Auto Theft,18
+Wychwood,Break and Enter,27
+Wychwood,Robbery,9
+Wychwood,Theft Over,2
+Wychwood,bicycle theft,37
+Yonge-Eglinton,Assault,68
+Yonge-Eglinton,Auto Theft,4
+Yonge-Eglinton,Break and Enter,19
+Yonge-Eglinton,Robbery,17
+Yonge-Eglinton,Theft Over,3
+Yonge-Eglinton,bicycle theft,21
+Yonge-St.Clair,Assault,39
+Yonge-St.Clair,Auto Theft,7
+Yonge-St.Clair,Break and Enter,13
+Yonge-St.Clair,Robbery,6
+Yonge-St.Clair,Theft Over,8
+Yonge-St.Clair,bicycle theft,17
+York University Heights,Assault,358
+York University Heights,Auto Theft,106
+York University Heights,Break and Enter,98
+York University Heights,Robbery,70
+York University Heights,Theft Over,34
+York University Heights,bicycle theft,27
+York University Heights,homicide,2
+Yorkdale-Glen Park,Assault,178
+Yorkdale-Glen Park,Auto Theft,43
+Yorkdale-Glen Park,Break and Enter,65
+Yorkdale-Glen Park,Robbery,24
+Yorkdale-Glen Park,Theft Over,24
+Yorkdale-Glen Park,bicycle theft,11
+Yorkdale-Glen Park,homicide,1
