@@ -15,6 +15,10 @@ mongo = PyMongo(app, uri="mongodb://localhost:27017/crime_db")
 
 @app.route("/")
 def home():
+    return render_template("index.html")
+
+@app.route("/all-data")
+def get_data():
 
     # Declare the collection
     collection = mongo.db.all_crimes
@@ -33,6 +37,9 @@ def home():
     # Return a jsonified list of dictionaries
     return jsonify(data_list)
 
+@app.route("/map")
+def temp():
+    return render_template("map.html")
 
 @app.route("/scatter")
 def scatter():
@@ -44,7 +51,7 @@ def scatter():
 
     # Get only the data for robbery, assault and break and enter
     
-    for x in collection.find({'$or': [{'MCI': 'Robbery'}, {'MCI': 'Assault'}, {'MCI': 'Break and Enter'}]}, {"_id": 0}):
+    for x in collection.find({'$or': [{'MCI': 'Robbery'}, {'MCI': 'Assault'}, {'MCI': 'Break and Enter'},{'MCI': 'bicycle theft'},{'MCI': 'Auto Theft'}]}, {"_id": 0}):
         avg_age = x["Average age"]
         income = x["  Average after-tax income of households in 2015 ($)"]
         unemployment = x["Unemployment rate"]
@@ -61,9 +68,8 @@ def scatter():
 
         scatter_data.append(scatter)  
 
-    # Return template and data
-    return render_template("index.html", info=scatter_data)
-
+    # Return a jsonified list of dictionaries
+    return jsonify(scatter_data)
 
 if __name__ == "__main__":
     app.run(debug=True)

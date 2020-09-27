@@ -11,45 +11,54 @@
     <!-- bootstrap css links and script -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <link rel="stylesheet" type="text/css" href="static/css/style.css">
+
+    <!-- custom css -->
+    <link rel="stylesheet" type="text/css" href="../static/css/style.css">
 
 </head>
 
 <body>
-    <div class="container">
+    <div class="container-fluid">
         <div class="row">
-          <div class="col-md-12 jumbotron text-center" style=" background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/b/b5/Toronto_August_2017.jpg/1280px-Toronto_August_2017.jpg');background-size: cover;">
-            <h1>Toronto Crime and Demographics</h1>
-            <p>Use the interactive charts below to explore city of Toronto & crime in the city</p>
-          </div>
+            <div class="col-md-12 jumbotron text-center" style=" background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/b/b5/Toronto_August_2017.jpg/1280px-Toronto_August_2017.jpg');background-size: cover;">
+                <h1>Toronto Crime and Demographics</h1>
+                <p>Use the interactive charts below to explore city of Toronto & crime in the city</p>
+            </div>
         </div>
 
         <div class="row">
             <div class="col-md-2">
-              <div class="well">
-                <h4>Neighbourhood</h4>
-                <select id="selDataset" onchange="optionChanged(this.value)"></select>
-                <option></option>
-              </div>
-              <div class="panel panel-primary">
-                <div class="panel-heading">
-                  <h3 class="panel-title">Demographic Info</h3>
+                <div class="card mb-4">
+                    <div class="card-header bg-dark text-light text-center header-font">Neighbourhood</div>
+                    <div class="card-body p-2 text-center bg-light">
+                        <select id="selDataset" onchange="optionChanged(this.value)"></select>
+                    </div>
                 </div>
-                <div id="sample-metadata" class="panel-body"></div>
-              </div>
+                <div class="card">
+                    <div class="card-header bg-dark text-light text-center header-font">Demographic Info</div>
+                    <div class="card-body p-2 bg-light" id="demographic-info">
+                    </div>
+                </div>
             </div>
             <div class="col-md-5">
-              <div id="bar"></div>
+                <div id="bar">
+                    <h4>Bar chart here</h4>
+                </div>
             </div>
-  <!-- add another div for Map  -->
-
- <!-- add another div for scatter  -->
-  
-
+            <div class="col-md-5">
+                <div id="map-container">
+                    <h4>Click <a href="/map">here</a> to see the crime map of Toronto!</h4>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <div id="scatter">
+                    <h4>Scatter chart here</h4>
+                </div>
+            </div>
+        </div>
     </div>
-
-
-
 
     <!-- Bootstrap javascript tags -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
@@ -59,12 +68,13 @@
 
     <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
 
+    <!-- D3 JavaScript -->
     <script src="https://d3js.org/d3.v5.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.5.0/d3.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/d3-tip/0.7.1/d3-tip.min.js"></script>
 
-    <script type="text/javascript" src="static/js/logic.js"></script>
-    <script type="text/javascript" src="static/js/bar.js"></script>
+    <script type="text/javascript" src="../static/js/logic.js"></script>
+    <!-- <script type="text/javascript" src="static/js/bar.js"></script> -->
 
 </body>
 
