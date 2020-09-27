@@ -43,25 +43,33 @@ function createMarkers(crimeData) {
     d3.json(torontoGeoJson).then(function(response) {
 
         var boundaryFeatures = response.features;
+        console.log(boundaryFeatures);
 
         // Creating a geoJSON layer with the retrieved data
         var neighbourhoods = L.geoJson(boundaryFeatures, {
             // Passing in our style object
             style: mapStyle,
             onEachFeature: function(feature, layer) {
+
+                if (feature.properties && feature.properties.AREA_NAME) {
+                    layer.bindPopup(feature.properties.AREA_NAME);
+                }
+
                 layer.on('mouseover', function() {
-                    this.setStyle({
-                        'fillColor': '#00b8e6'
-                    });
+                    layer.openPopup(),
+                        this.setStyle({
+                            'fillColor': '#00b8e6'
+                        });
                 });
                 layer.on('mouseout', function() {
-                    this.setStyle({
-                        'fillColor': '#ccf5ff'
-                    });
+                    layer.closePopup(),
+                        this.setStyle({
+                            'fillColor': '#ccf5ff'
+                        });
                 });
                 layer.on('click', function() {
                     // Let's say you've got a property called url in your geojsonfeature:
-                    window.location = feature.properties.url;
+                    layer.openPopup();
                 });
             }
         });
