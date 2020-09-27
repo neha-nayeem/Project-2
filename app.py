@@ -13,8 +13,12 @@ app = Flask(__name__)
 # Use PyMongo to establish Mongo connection
 mongo = PyMongo(app, uri="mongodb://localhost:27017/crime_db")
 
-@app.route("/api")
+@app.route("/")
 def home():
+    return render_template("index.html")
+
+@app.route("/all-data")
+def get_data():
 
     # Declare the collection
     collection = mongo.db.all_crimes
@@ -33,9 +37,9 @@ def home():
     # Return a jsonified list of dictionaries
     return jsonify(data_list)
 
-@app.route("/gototemp")
+@app.route("/map")
 def temp():
-    return render_template("temp.html")
+    return render_template("map.html")
 
 @app.route("/scatter")
 def scatter():
@@ -64,9 +68,8 @@ def scatter():
 
         scatter_data.append(scatter)  
 
-    # Return template and data
-    return render_template("index.html", info=scatter_data)
-
+    # Return a jsonified list of dictionaries
+    return jsonify(scatter_data)
 
 if __name__ == "__main__":
     app.run(debug=True)
