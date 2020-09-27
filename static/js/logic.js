@@ -11,7 +11,7 @@ var barChart = d3.select("#bar");
 var scatterChart = d3.select("#scatter");
 
 // json data url
-var queryUrl = "http://127.0.0.1:5000/all-data";
+var queryUrl = "http://127.0.0.1:5000/charts";
 
 // create a function to initially populate dropdown menu with IDs and draw charts by default (using the first neighbourhood)
 function init() {
