@@ -1,5 +1,5 @@
-// select the user input field
-var userSelect = d3.select("#selDataset");
+// select the modal title 
+var modalHeader = d3.select("#modal-heading");
 
 // select the demographic info div's ul list group
 var demographicsTable = d3.select("#demographic-info");
@@ -14,59 +14,6 @@ var scatterChart = d3.select("#scatter");
 var queryUrl = "http://127.0.0.1:5000/charts";
 
 
-
-// create a function to initially populate dropdown menu with IDs and draw charts by default (using the first neighbourhood)
-function init() {
-
-    // reset any previous data
-    resetData();
-
-    // read in samples from JSON file
-    d3.json(queryUrl).then((data => {
-        // console.log(data);
-        // ----------------------------------
-        // POPULATE DROPDOWN MENU WITH NEIGHBOURHOODS 
-        // ----------------------------------
-
-        var lookup = {};
-        //var items = json.DATA;
-        var result = [];
-
-        // for (var item, i = 0; item = items[i++];) {
-        //     var name = item.name;
-
-        //     if (!(name in lookup)) {
-        //         lookup[name] = 1;
-        //         result.push(name);
-        //     }
-        // }
-
-
-
-        //  use a forEach to loop over each name in the array data to populate dropdowns with neighbourhood names
-        data.forEach((item => {
-
-            var name = item["Neighbourhood Name"];
-            if (!(name in lookup)) {
-                lookup[name] = 1;
-                result.push(name);
-
-                var option = userSelect.append("option");
-                option.text(name);
-            }
-
-        })); // close forEach
-
-        // get the first ID from the list for initial charts as a default
-        var initNeighbourhood = userSelect.property("value")
-
-        // // plot charts with initial ID
-        plotCharts(initNeighbourhood);
-
-    })); // close .then()
-
-} // close init() function
-
 // create a function to reset divs to prepare for new data
 function resetData() {
 
@@ -80,46 +27,49 @@ function resetData() {
 
 }; // close resetData()
 
-init();
-
-
-// create a function to read JSON and plot charts
+// create a function to take in parameter from clicked neighbourhood, read JSON and plot charts
 function plotCharts(neighbourhood) {
+
+    // reset previous data
+    resetData();
+
     // ----------------------------------
     // POPULATE DEMOGRAPHICS TABLE
     // ----------------------------------
+
     // read in the JSON data
     d3.json(queryUrl).then((data => {
-        console.log(data);
 
-        // filter the metadata for the ID chosen
+        // filter the information for the neighbourhood chosen
         var info = data.filter(item => item["Neighbourhood Name"] == neighbourhood)[0];
 
-        console.log(info);
+        // update the heading in the modal popup with neighbourhood name
+        modalHeader.html(`Neighbourhood: ${neighbourhood}`);
 
-        // wantedKeys = ["Average age", "Hood_ID", "Population", "Unemployment rate", "household_income", "population_density"];
+        // create a new UL element in the demographics div
+        var newList = demographicsTable.append("ul")
+            .attr("class", "list-group list-group-flush");
 
-        var newList = demographicsTable.append("ul");
-        newList.attr("class", "list-group list-group-flush");
-
-        // Iterate through each key and value in the item
+        // Iterate through each key and value in the demographics info
         Object.entries(info).forEach(([key, value]) => {
 
+            // conditional statement to not include the three keys below
             if ((key != "MCI") && (key != "Neighbourhood Name") && (key != "number_of_crime")) {
+
                 // append a li item to the unordered list tag
                 var listItem = newList.append("li");
 
                 // change the class attributes of the list item for styling
                 listItem.attr("class", "list-group-item p-1 bg-transparent");
 
+                // round the average age
                 if (key == "Average age") {
-                    value = Math.round(value, 2)
+                    value = Math.round((value * 100) / 100)
                 }
 
                 // add the key value pair from the metadata to the demographics list
                 listItem.text(`${key}: ${value}`);
             }
-
 
         }); // close forEach
 
@@ -161,21 +111,28 @@ function plotCharts(neighbourhood) {
 
         // define the plot layout
         var layoutBar = {
-            height: 500,
-            width: 600,
+            height: 400,
+            width: 500,
+            margin: {
+                l: 100,
+                r: 5,
+                b: 70,
+                t: 50,
+                pad: 2
+            },
             font: {
-                family: 'Quicksand'
+                family: 'Roboto'
             },
             hoverlabel: {
                 font: {
-                    family: 'Quicksand'
+                    family: 'Roboto'
                 }
             },
             title: {
-                text: `<b>Top crimes for ${neighbourhood}</b>`,
+                text: `<b>Top crimes</b>`,
                 font: {
                     size: 18,
-                    color: 'rgb(34,94,168)'
+                    color: 'Black'
                 }
             },
             xaxis: {
@@ -183,10 +140,9 @@ function plotCharts(neighbourhood) {
                 color: 'rgb(34,94,168)'
             },
             yaxis: {
-                tickfont: { size: 14 }
+                tickfont: { size: 12 }
             }
         }
-
 
         // plot the bar chart to the "bar" div
         Plotly.newPlot("bar", dataBar, layoutBar);
@@ -195,22 +151,4 @@ function plotCharts(neighbourhood) {
     })); // end d3 .then
 
 
-
-
-
-
-
-
-
 }; // end plotCharts function
-
-function optionChanged(neighbourhood) {
-
-    // reset the data
-    resetData();
-
-    // plot the charts for this id
-    plotCharts(neighbourhood);
-
-
-} // close optionChanged function
