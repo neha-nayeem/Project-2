@@ -1,0 +1,32 @@
+* {
+    font-family: 'Roboto', serif;
+}
+
+.navbar span {
+    font-family: 'Roboto Slab', serif;
+    font-weight: 600;
+    font-size: 24px;
+}
+
+#map {
+    position: relative;
+    border: 1px solid black;
+    border-radius: 8px;
+    height: 100%;
+    width: 100%;
+}
+
+#bar {
+    width: 100%;
+}
+
+#svg {
+    width: 32px;
+    height: 32px;
+}
+
+.header-font {
+    font-family: 'Roboto Slab', serif;
+    font-weight: 600;
+    font-size: 24px;
+}
