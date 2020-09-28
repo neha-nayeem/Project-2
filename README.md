@@ -20,12 +20,12 @@
 * [Toronto Neighbourhoods Ward Model](https://www.toronto.ca/city-government/data-research-maps/neighbourhoods-communities/ward-profiles/47-ward-model/)
 
 ## Viz Inspiration📊 📈 📉
-![map](img/map.png)
-![scatter-plot](img/scatter-plot.png)
-![bar-chart](img/plotly.png)
+![map](static/img/map.png)
+![scatter-plot](static/img/scatter-plot.png)
+![bar-chart](static/img/plotly.png)
 
 ## Data Flow Diagram🖊
-![Diagram](img/diagram.png)
+![Diagram](static/img/diagram.png)
 
 ## Sources 🔗
 * [Toronto Neighbourhoods GeoJson](https://github.com/jasonicarter/toronto-geojson)
