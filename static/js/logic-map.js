@@ -2,6 +2,10 @@ var queryurl = "http://127.0.0.1:5000/all-data";
 
 var torontoGeoJson = "https://raw.githubusercontent.com/jasonicarter/toronto-geojson/master/toronto_crs84.geojson";
 
+// select the modal popup element
+var modal = d3.select("#modalDiv");
+
+// read in the JSON data
 d3.json(queryurl).then(function(data) {
 
     // Once we get a response, send the data object to the createMarkers function
@@ -9,9 +13,10 @@ d3.json(queryurl).then(function(data) {
 
 });
 
+// define a function to add marker clusters to the map
 function createMarkers(crimeData) {
-    console.log(crimeData);
 
+    // define a new marker cluster group
     var markers = L.markerClusterGroup();
 
     // loop through data
@@ -43,44 +48,66 @@ function createMarkers(crimeData) {
     d3.json(torontoGeoJson).then(function(response) {
 
         var boundaryFeatures = response.features;
-        console.log(boundaryFeatures);
 
         // Creating a geoJSON layer with the retrieved data
         var neighbourhoods = L.geoJson(boundaryFeatures, {
+
             // Passing in our style object
             style: mapStyle,
+
+            // function for each geoJSON feature/layer
             onEachFeature: function(feature, layer) {
 
+                // if AREA_NAME is present, bind popup
                 if (feature.properties && feature.properties.AREA_NAME) {
                     layer.bindPopup(feature.properties.AREA_NAME);
                 }
 
+                // event listeners for each layer
                 layer.on('mouseover', function() {
                     layer.openPopup(),
                         this.setStyle({
                             'fillColor': '#00b8e6'
                         });
                 });
+
                 layer.on('mouseout', function() {
                     layer.closePopup(),
                         this.setStyle({
                             'fillColor': '#ccf5ff'
                         });
                 });
+
+                // on click event listener that send the neighbourhood name to plotCharts() and brings up the modal popup
                 layer.on('click', function() {
-                    // Let's say you've got a property called url in your geojsonfeature:
-                    layer.openPopup();
+                    // store the neighbourhood name property
+                    var areaName = feature.properties.AREA_NAME;
+
+                    // format the name by trimming the neighbourhood ID from the end of the string
+                    areaName = areaName.slice(0, areaName.indexOf("("));
+                    areaName = areaName.trimEnd();
+
+
+                    // initiate the modal popup
+                    $('#modalDiv').modal('show');
+
+                    // call the plotCharts function for the neighbourhood
+                    plotCharts(areaName);
+
                 });
             }
         });
 
+        // call the createMaps function with our markers and neighbourhood layers
         createMap(markers, neighbourhoods);
 
     });
 
 }; // end createMarkers
 
+// define a createMap function
 function createMap(markers, neighbourhoods) {
+
     // Initial parameters to create map
     var torontoLocation = [43.6532, -79.3832];
     var mapZoom = 12;
@@ -130,5 +157,10 @@ function createMap(markers, neighbourhoods) {
     L.control.layers(baseMaps, overlayMaps, {
         collapsed: false
     }).addTo(myMap);
+
+    // re-adjust the width/height bounds of the map container to fit in the bootstrap div
+    setTimeout(function() {
+        myMap.invalidateSize();
+    }, 10);
 
 }; // end createMap function
