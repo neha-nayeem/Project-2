@@ -90,6 +90,10 @@ function plotCharts(neighbourhood) {
 
         }; // close for 
 
+        // sort the array to get the top crime numbers in ascending order
+        var sortedNumbers = numbers.sort(d3.ascending);
+        console.log(sortedNumbers);
+
         // ----------------------------------
         // PLOT BAR CHART
         // ----------------------------------
