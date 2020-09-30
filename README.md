@@ -41,7 +41,7 @@ Our Flask app connects to the mongo database and pulls in data, implements furth
 
 * `/api/v1/raw-data`: This endpoint pulls data as is from the mongo database and returns a JSON format that is used by our code `logic-map.js` to create an interactive map.
 
-* `api/v1/neighbourhood-summary`: This endpoint pulls another collection from the mongo database that holds neighbourhood demographics, used for plotting. Before the data is returned in JSON format, some additional transformation is completed to get the data in exactly the way we need it for plotting.
+* `/api/v1/neighbourhood-summary`: This endpoint pulls another collection from the mongo database that holds neighbourhood demographics, used for plotting in `logic.js`. Before the data is returned in JSON format, some additional transformation is completed to get the data in exactly the way we need it for plotting.
 
 ### Visualization
 Our visualization dashboard consists of the following technologies:
