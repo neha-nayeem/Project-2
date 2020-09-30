@@ -38,46 +38,6 @@ function plotCharts(neighbourhood) {
     // read in the JSON data
     d3.json("api/v1/neighbourhood-summary").then((data => {
 
-        // var neighbourhoodList = Array.from(new Set(data.map(d => d["Neighbourhood Name"])));
-
-        // var neighbourhoodCrimes = [];
-
-        // for (var i = 0; i < neighbourhoodList.length; i++) {
-        //     var name = neighbourhoodList[i];
-
-        //     var element = {};
-
-        //     element["Neighbourhood"] = name;
-
-
-        //     var crimesList = [];
-        //     var numberOfCrimes = [];
-
-        //     element["crimes"] = crimesList;
-        //     element["crime_numbers"] = numberOfCrimes;
-
-        //     for (var j = 0; j < data.length; j++) {
-
-        //         if ((data[j]["Neighbourhood Name"] == name)) {
-        //             var crime = data[j]["MCI"];
-        //             var num = data[j]["number_of_crime"];
-        //             element.crimes.push(crime);
-        //             element.crime_numbers.push(num);
-
-        //             // get the rest of the info for each neighbourhood, parsing into numerical if needed
-        //             element["age"] = +data[j]["Average age"];
-        //             element["hoodID"] = +data[j]["Hood_ID"];
-        //             element["population"] = +data[j]["Population"];
-        //             element["unemployment"] = +data[j]["Unemployment rate"];
-        //             element["income"] = +data[j]["household_income"];
-        //             element["populationDensity"] = +data[j]["population_density"];
-
-        //             neighbourhoodCrimes.push(element);
-        //         }; // if
-        //     }; // second for
-        // }; // first for
-
-
         // filter the information for the neighbourhood chosen
         var neighbourhoodInfo = data.filter(item => item["Neighbourhood"] == neighbourhood)[0];
 
@@ -172,7 +132,6 @@ function plotCharts(neighbourhood) {
         sortedList.sort(function(a, b) {
             return ((a.number < b.number) ? -1 : ((a.number == b.number) ? 0 : 1));
         })
-        console.log(sortedList);
 
         for (var j = 0; j < sortedList.length; j++) {
             crimeTypes[j] = sortedList[j].crime;
@@ -203,7 +162,7 @@ function plotCharts(neighbourhood) {
             width: 500,
             margin: {
                 l: 100,
-                r: 5,
+                r: 20,
                 b: 70,
                 t: 50,
                 pad: 2
@@ -323,7 +282,7 @@ function makeResponsive() {
             plotData.push(element);
         }
 
-        console.log(plotData);
+        //console.log(plotData);
 
         // Initial chart x,y parameters
         // ============================================

@@ -67,8 +67,12 @@ def neighbourhood_data():
     # Declare the collection
     collection = mongo.db.neighbourhood_summary
 
+    main_data =[]
+
     # Get all results
     results = collection.find({}, {"_id": 0})
+    for y in results:
+        main_data.append(y)
 
     # Get all unique neighbourhoods
     unique_hoods = collection.find().distinct('Neighbourhood Name')
@@ -76,16 +80,18 @@ def neighbourhood_data():
     neighbourhoodCrimes = []
 
     # for loop to loop through each item in the unique neighbourhood list
-    for x in unique_hoods:
+    for i in range(len(unique_hoods)):
+
+        name = unique_hoods[i]
 
         # new dict for each neighbourhood
         element = {}
 
         # change neighbourhood name to "Mimico" for the "Mimico (includes Humber Bay Shores)" neighbourhood for simplicity
-        if (x == "Mimico (includes Humber Bay Shores)"):
+        if (name == "Mimico (includes Humber Bay Shores)"):
             name = "Mimico"
         else:
-            name = x
+            name = unique_hoods[i]
         
         element["Neighbourhood"] = name
 
@@ -95,25 +101,24 @@ def neighbourhood_data():
         element["crimes"] = crimesList
         element["crime_numbers"] = numberOfCrimes
 
-        for z in results:
-            if (z["Neighbourhood Name"] == x):
-                crime = z["MCI"]
-                num = z["number_of_crime"]
-                crimesList.append(crime)
-                numberOfCrimes.append(num)
+        for j in range(len(main_data)):
 
-                # get the rest of the info for each neighbourhood, parsing into numerical if needed
-                element["age"] = z["Average age"]
-                element["hoodID"] = z["Hood_ID"]
-                element["population"] = z["Population"]
-                element["unemployment"] = z["Unemployment rate"]
-                element["income"] = z["household_income"]
-                element["populationDensity"] = z["population_density"]
+            if (main_data[j]["Neighbourhood Name"] == name):
+                crime = main_data[j]["MCI"]
+                num = main_data[j]["number_of_crime"]
+                element["crimes"].append(crime)
+                element["crime_numbers"].append(num)
+
+                # get the rest of the info for each neighbourhood
+                element["age"] = main_data[j]["Average age"]
+                element["hoodID"] = main_data[j]["Hood_ID"]
+                element["population"] = main_data[j]["Population"]
+                element["unemployment"] = main_data[j]["Unemployment rate"]
+                element["income"] = main_data[j]["household_income"]
+                element["populationDensity"] = main_data[j]["population_density"]
 
                 # store each item (dict) in the list
                 neighbourhoodCrimes.append(element)
-            else:
-                break
 
     neighbourhoodCrimes = removeDuplicates(neighbourhoodCrimes)
     neighbourhoodCrimes = formatValues(neighbourhoodCrimes)
