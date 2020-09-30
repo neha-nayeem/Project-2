@@ -28,12 +28,11 @@
 ![Diagram](static/img/diagram.png)
 
 ### ETL Process
-* **Extract**
-Toronto neighbourhood profiles and crime data were extracted from [Toronto Police Open Data](https://data.torontopolice.on.ca/pages/open-data) and [Toronto Open Data - Neighbourhood Profiles](https://open.toronto.ca/dataset/neighbourhood-profiles/) using their API.
-* **Transform**
-Using Jupyter Notebook and pandas, we cleaned and reorganized the data according to our needs.
-* **Load**
-Looking at the unpredictable structure of our data from our sources, Mongodb was our database of choice.
+* **Extract**: Toronto neighbourhood profiles and crime data were extracted from [Toronto Police Open Data](https://data.torontopolice.on.ca/pages/open-data) and [Toronto Open Data - Neighbourhood Profiles](https://open.toronto.ca/dataset/neighbourhood-profiles/) using their API.
+
+* **Transform**: Using Jupyter Notebook and pandas, we cleaned and reorganized the data according to our needs.
+
+* **Load**: Looking at the unpredictable structure of our data from our sources, Mongodb was our database of choice.
 
 ### Flask
 Our Flask app connects to the mongo database and pulls in data, implements further transformation and hosts our API endpoints as follows:
