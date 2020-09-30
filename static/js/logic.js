@@ -374,7 +374,7 @@ function makeResponsive() {
             .append("circle")
             .attr("cx", d => xScale(d[xAxisFactor]))
             .attr("cy", d => yScale(d[yAxisFactor]))
-            .attr("r", "12")
+            .attr("r", "14")
             .attr("opacity", "0.6")
             .classed("nCircle", true);
 
@@ -599,7 +599,7 @@ function updateTooltip(xAxisFactor, yAxisFactor, circlesGroup, idLabels) {
     // ==============================
     var toolTip = d3.tip()
         .attr("class", "d3-tip")
-        .offset([40, -80])
+        .offset([90, -90])
         .html(function(d) {
             return (`<strong>${d.Neighbourhood} </strong>(ID: ${d.hoodID})<br>${tooltipX}: ${d[xAxisFactor]}<br>${tooltipY}: ${d[yAxisFactor]}`);
         });
@@ -607,7 +607,7 @@ function updateTooltip(xAxisFactor, yAxisFactor, circlesGroup, idLabels) {
     // Create tooltip in the chart for both circles and id label groups
     // =======================================================================
     circlesGroup.call(toolTip);
-    // idLabels.call(toolTip);
+    //idLabels.call(toolTip);
 
     // Create event listeners to display and hide the tooltip
     // ==============================
