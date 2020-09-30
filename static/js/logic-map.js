@@ -1,12 +1,11 @@
-var queryurl = "http://127.0.0.1:5000/all-data";
-
+// toronto neighbourhoods geojson url
 var torontoGeoJson = "https://raw.githubusercontent.com/jasonicarter/toronto-geojson/master/toronto_crs84.geojson";
 
 // select the modal popup element
 var modal = d3.select("#modalDiv");
 
 // read in the JSON data
-d3.json(queryurl).then(function(data) {
+d3.json("/api/v1/raw-data").then(function(data) {
 
     // Once we get a response, send the data object to the createMarkers function
     createMarkers(data);
@@ -86,7 +85,6 @@ function createMarkers(crimeData) {
                     // format the name by trimming the neighbourhood ID from the end of the string
                     areaName = areaName.slice(0, areaName.indexOf("("));
                     areaName = areaName.trimEnd();
-
 
                     // initiate the modal popup
                     $('#modalDiv').modal('show');

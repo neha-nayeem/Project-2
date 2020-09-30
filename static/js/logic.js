@@ -10,10 +10,6 @@ var barChart = d3.select("#bar");
 // select the scatter chart div
 var scatterChart = d3.select("#scatter");
 
-// json data url
-var queryUrl = "http://127.0.0.1:5000/charts";
-
-
 // create a function to reset divs to prepare for new data
 function resetData() {
 
@@ -24,7 +20,6 @@ function resetData() {
     demographicsTable.html("");
     barChart.html("");
 
-
 }; // close resetData()
 
 // create a function to take in parameter from clicked neighbourhood, read JSON and plot charts
@@ -33,28 +28,28 @@ function plotCharts(neighbourhood) {
     // reset previous data
     resetData();
 
+    // update the heading in the modal popup with neighbourhood name
+    modalHeader.html(`Neighbourhood: ${neighbourhood}`);
+
     // ----------------------------------
     // POPULATE DEMOGRAPHICS TABLE
     // ----------------------------------
 
     // read in the JSON data
-    d3.json(queryUrl).then((data => {
+    d3.json("api/v1/neighbourhood-summary").then((data => {
 
         // filter the information for the neighbourhood chosen
-        var info = data.filter(item => item["Neighbourhood Name"] == neighbourhood)[0];
-
-        // update the heading in the modal popup with neighbourhood name
-        modalHeader.html(`Neighbourhood: ${neighbourhood}`);
+        var neighbourhoodInfo = data.filter(item => item["Neighbourhood"] == neighbourhood)[0];
 
         // create a new UL element in the demographics div
         var newList = demographicsTable.append("ul")
             .attr("class", "list-group list-group-flush");
 
         // Iterate through each key and value in the demographics info
-        Object.entries(info).forEach(([key, value]) => {
+        Object.entries(neighbourhoodInfo).forEach(([key, value]) => {
 
             // conditional statement to not include the three keys below
-            if ((key != "MCI") && (key != "Neighbourhood Name") && (key != "number_of_crime")) {
+            if ((key != "crimes") && (key != "Neighbourhood") && (key != "crime_numbers")) {
 
                 // append a li item to the unordered list tag
                 var listItem = newList.append("li");
@@ -62,13 +57,44 @@ function plotCharts(neighbourhood) {
                 // change the class attributes of the list item for styling
                 listItem.attr("class", "list-group-item p-1 bg-transparent");
 
-                // round the average age
-                if (key == "Average age") {
-                    value = Math.round((value * 100) / 100)
+                // create labels for the table
+                var label = "";
+                var labelValue = "";
+                var unit = "";
+
+                switch (key) {
+                    case "age":
+                        label = "Age (average)";
+                        labelValue = value.toFixed(1);
+                        unit = "yrs"
+                        break;
+                    case "hoodID":
+                        label = "Neighbourhood ID";
+                        labelValue = value;
+                        break;
+                    case "population":
+                        label = "Population";
+                        labelValue = value;
+                        break;
+                    case "unemployment":
+                        label = "Unemployment rate";
+                        labelValue = value;
+                        unit = "%";
+                        break;
+                    case "income":
+                        label = "Household income (average) $";
+                        labelValue = value;
+                        break;
+                    case "populationDensity":
+                        label = "Population density (per sq. km)"
+                        labelValue = value;
+                        break;
+                    default:
+                        break;
                 }
 
                 // add the key value pair from the metadata to the demographics list
-                listItem.text(`${key}: ${value}`);
+                listItem.text(`${label}: ${labelValue} ${unit}`);
             }
 
         }); // close forEach
@@ -77,22 +103,40 @@ function plotCharts(neighbourhood) {
         // RETRIEVE DATA FOR PLOTTING CHARTS
         // --------------------------------------------------
 
-        // filter the crimes for the neighbourhood chosen
-        var crimeData = data.filter(d => d["Neighbourhood Name"] == neighbourhood);
-        //console.log(crimeData);
+        var crimeTypes = [];
+        var crimeValues = [];
 
-        var crimes = [];
-        var numbers = [];
+        // Iterate through each key and value in the sample to retrieve data for plotting
+        Object.entries(neighbourhoodInfo).forEach(([key, value]) => {
 
-        for (var i = 0; i < crimeData.length; i++) {
-            crimes.push(crimeData[i]["MCI"]);
-            numbers.push(crimeData[i]["number_of_crime"]);
+            switch (key) {
+                case "crimes":
+                    crimeTypes.push(value);
+                    break;
+                case "crime_numbers":
+                    crimeValues.push(value);
+                default:
+                    break;
+            } // close switch statement
 
-        }; // close for 
+        }); // close forEach
 
-        // sort the array to get the top crime numbers in ascending order
-        var sortedNumbers = numbers.sort(d3.ascending);
-        console.log(sortedNumbers);
+        crimeTypes = crimeTypes[0];
+        crimeValues = crimeValues[0];
+
+        // // sort and reverse the arrays to get the top crime numbers in ascending order
+        var sortedList = [];
+        for (var i = 0; i < crimeTypes.length; i++) {
+            sortedList.push({ "crime": crimeTypes[i], "number": crimeValues[i] });
+        }
+        sortedList.sort(function(a, b) {
+            return ((a.number < b.number) ? -1 : ((a.number == b.number) ? 0 : 1));
+        })
+
+        for (var j = 0; j < sortedList.length; j++) {
+            crimeTypes[j] = sortedList[j].crime;
+            crimeValues[j] = sortedList[j].number;
+        }
 
         // ----------------------------------
         // PLOT BAR CHART
@@ -100,9 +144,8 @@ function plotCharts(neighbourhood) {
 
         // create a trace
         var traceBar = {
-            x: numbers,
-            y: crimes,
-            // text: numbers,
+            x: crimeValues,
+            y: crimeTypes,
             type: 'bar',
             orientation: 'h',
             marker: {
@@ -119,7 +162,7 @@ function plotCharts(neighbourhood) {
             width: 500,
             margin: {
                 l: 100,
-                r: 5,
+                r: 20,
                 b: 70,
                 t: 50,
                 pad: 2
@@ -161,7 +204,6 @@ function makeResponsive() {
 
     // Select the SVG area
     var svgArea = d3.select("#scatter").select("svg");
-    //console.log(svgArea);
 
     // if the SVG area isn't empty when the browser loads,
     // remove it and replace it with a resized version of the chart
@@ -201,43 +243,46 @@ function makeResponsive() {
     // Import data from the data.csv file
     // =================================
 
-    d3.json(queryUrl).then(data => {
-        //console.log(data);
+    d3.json("/api/v1/neighbourhood-summary").then(data => {
 
-        var neighbourhoodList = Array.from(new Set(data.map(d => d["Neighbourhood Name"])));
+        // create a new list for plotting scatter plot correctly
+        var plotData = [];
 
-        var neighbourhoodCrimes = [];
+        // loop through each neighbourhood
+        for (var i = 0; i < data.length; i++) {
 
-        for (var i = 0; i < neighbourhoodList.length; i++) {
-            var name = neighbourhoodList[i];
+            var name = data[i]["Neighbourhood"];
 
+            // create new dict for each neighbourhood
             var element = {};
 
+            // add the name of the neighbourhood to the dict
             element["Neighbourhood"] = name;
 
-            for (var j = 0; j < data.length; j++) {
+            // store the crime type and numbers to an array each
+            var crimesList = data[i]['crimes']
+            var crimeNums = data[i]['crime_numbers']
 
+            // go through the array to store the data as crime type: number - "Assault": 77 (e.g.)
+            for (var j = 0; j < crimesList.length; j++) {
+                var crime = crimesList[j];
+                var num = crimeNums[j];
+                element[crime] = num;
+            }
 
-                if ((data[j]["Neighbourhood Name"] == name)) {
-                    var crime = data[j]["MCI"];
-                    var num = data[j]["number_of_crime"];
-                    element[crime] = num;
+            // get the rest of the info for each neighbourhood, parsing into numerical if needed
+            element["age"] = +data[i]["age"];
+            element["hoodID"] = +data[i]["hoodID"];
+            element["population"] = +data[i]["population"];
+            element["unemployment"] = +data[i]["unemployment"];
+            element["income"] = +data[i]["income"];
+            element["populationDensity"] = +data[i]["populationDensity"];
 
-                    // get the rest of the info for each neighbourhood, parsing into numerical if needed
-                    element["age"] = +data[j]["Average age"];
-                    element["hoodID"] = +data[j]["Hood_ID"];
-                    element["population"] = +data[j]["Population"];
-                    element["unemployment"] = +data[j]["Unemployment rate"];
-                    element["income"] = +data[j]["household_income"];
-                    element["populationDensity"] = +data[j]["population_density"];
+            // push to the new list
+            plotData.push(element);
+        }
 
-                    neighbourhoodCrimes.push(element);
-                }; // if
-            }; // second for
-        }; // first for
-
-        var uniqueArray = getUniqueArray(neighbourhoodCrimes);
-        //console.log(uniqueArray);
+        //console.log(plotData);
 
         // Initial chart x,y parameters
         // ============================================
@@ -251,9 +296,8 @@ function makeResponsive() {
         var xScale = d3.scaleLinear().range([0, chartWidth]);
         var yScale = d3.scaleLinear().range([chartHeight, 0]);
 
-        xScale.domain(domainX(uniqueArray, xAxisFactor));
-        yScale.domain(domainY(uniqueArray, yAxisFactor));
-
+        xScale.domain(domainX(plotData, xAxisFactor));
+        yScale.domain(domainY(plotData, yAxisFactor));
 
         // Create Axes
         // =============================================
@@ -325,12 +369,12 @@ function makeResponsive() {
         // ===============================
         var circlesGroup = chartGroup.append("g")
             .selectAll("circle")
-            .data(uniqueArray)
+            .data(plotData)
             .enter()
             .append("circle")
             .attr("cx", d => xScale(d[xAxisFactor]))
             .attr("cy", d => yScale(d[yAxisFactor]))
-            .attr("r", "10")
+            .attr("r", "12")
             .attr("opacity", "0.6")
             .classed("nCircle", true);
 
@@ -338,7 +382,7 @@ function makeResponsive() {
         // ========================= 
         var idLabels = chartGroup.append("g")
             .selectAll("text")
-            .data(uniqueArray)
+            .data(plotData)
             .enter()
             .append("text")
             .attr("x", d => xScale(d[xAxisFactor]))
@@ -367,7 +411,7 @@ function makeResponsive() {
                 xAxisFactor = xAxisValue;
 
                 // Create new xScale domain
-                xScale.domain(domainX(uniqueArray, xAxisFactor));
+                xScale.domain(domainX(plotData, xAxisFactor));
 
                 // Update xAxis with new scale
                 updateXAxis(xScale, xAxis);
@@ -415,7 +459,7 @@ function makeResponsive() {
                 yAxisFactor = yAxisValue;
 
                 // Create new yScale domain
-                yScale.domain(domainY(uniqueArray, yAxisFactor));
+                yScale.domain(domainY(plotData, yAxisFactor));
 
                 // Update yAxis with new scale
                 updateYAxis(yScale, yAxis);
@@ -449,37 +493,20 @@ function makeResponsive() {
 
         }); // close "on click" function for y axis       
 
-
-    });
+    }); // close d3. then
 
 }; // close makeResponsive() 
 
-
+// call the responsive scatter plot function
 makeResponsive();
+
 // Event listener for window resize.
 // When the browser window is resized, makeResponsive() is called.
 d3.select(window).on("resize", makeResponsive);
 
-// define a function to create a unique array of objects
-// source: https://medium.com/@jithinsebastian2/remove-duplicate-objects-from-an-array-of-objects-javascript-es6-9d36f705d376
-function getUniqueArray(arr = [], compareProps = []) {
-    let modifiedArray = [];
-    if (compareProps.length === 0 && arr.length > 0)
-        compareProps.push(...Object.keys(arr[0]));
-    arr.map(item => {
-        if (modifiedArray.length === 0) {
-            modifiedArray.push(item);
-        } else {
-            if (!modifiedArray.some(item2 =>
-                    compareProps.every(eachProps => item2[eachProps] === item[eachProps])
-                )) { modifiedArray.push(item); }
-        }
-    });
-    return modifiedArray;
-}
 
 
-// Functions to determine x,y domains for scaling 
+// Functions to determine x,y domains for scaling the scatter plot
 // ==================================================  
 function domainX(dataset, factor) {
     var domain = d3.extent(dataset, data => data[factor]);
@@ -542,7 +569,6 @@ function updateTooltip(xAxisFactor, yAxisFactor, circlesGroup, idLabels) {
     switch (xAxisFactor) {
         case "age":
             tooltipX = "Age";
-            //xAxisFactor = Math.round(xAxisFactor);
             break;
         case "income":
             tooltipX = "Household Income";
@@ -575,13 +601,13 @@ function updateTooltip(xAxisFactor, yAxisFactor, circlesGroup, idLabels) {
         .attr("class", "d3-tip")
         .offset([40, -80])
         .html(function(d) {
-            return (`<strong>${d.Neighbourhood} </strong>(ID: ${d.hoodID})<br>${tooltipX}: ${Math.round(d[xAxisFactor])}<br>${tooltipY}: ${d[yAxisFactor]}`);
+            return (`<strong>${d.Neighbourhood} </strong>(ID: ${d.hoodID})<br>${tooltipX}: ${d[xAxisFactor]}<br>${tooltipY}: ${d[yAxisFactor]}`);
         });
 
     // Create tooltip in the chart for both circles and id label groups
     // =======================================================================
     circlesGroup.call(toolTip);
-    idLabels.call(toolTip);
+    // idLabels.call(toolTip);
 
     // Create event listeners to display and hide the tooltip
     // ==============================
@@ -589,13 +615,16 @@ function updateTooltip(xAxisFactor, yAxisFactor, circlesGroup, idLabels) {
             toolTip.show(d, this)
         })
         .on("mouseout", d => {
-            toolTip.hide(d);
+            toolTip.hide(d)
+        })
+        .on("click", d => {
+            toolTip.show(d, this)
         });
 
-    idLabels.on("mouseover", d => {
-            toolTip.show(d, this)
-        })
-        .on("mouseout", d => {
-            toolTip.hide(d);
-        });
+    // idLabels.on("mouseover", d => {
+    //         toolTip.show(d, this)
+    //     })
+    //     .on("mouseout", d => {
+    //         toolTip.hide(d);
+    //     });
 };
