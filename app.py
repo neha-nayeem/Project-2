@@ -94,8 +94,6 @@ def neighbourhood_data():
         else:
             name = unique_hoods[i]
 
-        print(name)
-
         # new dict for each neighbourhood
         element = {}
 
