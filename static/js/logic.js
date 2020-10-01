@@ -268,6 +268,11 @@ function makeResponsive() {
                 var crime = crimesList[j];
                 var num = crimeNums[j];
                 element[crime] = num;
+
+                // add robbery for this neighbourhood as it is undefined in the raw data
+                if (name == "Bayview Woods-Steeles") {
+                    element["Robbery"] = 0;
+                }
             }
 
             // get the rest of the info for each neighbourhood, parsing into numerical if needed
@@ -281,8 +286,6 @@ function makeResponsive() {
             // push to the new list
             plotData.push(element);
         }
-
-        //console.log(plotData);
 
         // Initial chart x,y parameters
         // ============================================
@@ -449,7 +452,6 @@ function makeResponsive() {
 
             // Store the value clicked           
             var yAxisValue = d3.select(this).attr("value");
-            console.log(yAxisValue);
 
             // If the value is different from the one drawn by default
             if (yAxisValue !== yAxisFactor) {
@@ -492,7 +494,9 @@ function makeResponsive() {
 
         }); // close "on click" function for y axis       
 
-    }); // close d3. then
+    }).catch(function(error) {
+        console.log(error);
+    });
 
 }; // close makeResponsive() 
 
