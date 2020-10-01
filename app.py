@@ -14,6 +14,7 @@ app = Flask(__name__)
 # Use PyMongo to establish Mongo connection
 mongo = PyMongo(app, uri="mongodb://localhost:27017/crime_db")
 
+# function to remove duplicate dicts from list
 def removeDuplicates(l):
     seen = set()
     uniqueList = []
@@ -28,6 +29,7 @@ def removeDuplicates(l):
 
     return (uniqueList)
 
+# function to format some of the values in the dict
 def formatValues(l):
     for d in l:
         d["hoodID"] = int(str(d["hoodID"])[:-2])
@@ -72,6 +74,10 @@ def neighbourhood_data():
     # Get all results
     results = collection.find({}, {"_id": 0})
     for y in results:
+        # change neighbourhood name to "Mimico" for the "Mimico (includes Humber Bay Shores)" neighbourhood for simplicity
+        if (y["Neighbourhood Name"] == "Mimico (includes Humber Bay Shores)"):
+            y["Neighbourhood Name"] = "Mimico"
+
         main_data.append(y)
 
     # Get all unique neighbourhoods
@@ -82,17 +88,17 @@ def neighbourhood_data():
     # for loop to loop through each item in the unique neighbourhood list
     for i in range(len(unique_hoods)):
 
-        name = unique_hoods[i]
+        # change neighbourhood name to "Mimico" for the "Mimico (includes Humber Bay Shores)" neighbourhood for simplicity
+        if (unique_hoods[i] == "Mimico (includes Humber Bay Shores)"):
+            name = "Mimico"
+        else:
+            name = unique_hoods[i]
+
+        print(name)
 
         # new dict for each neighbourhood
         element = {}
 
-        # change neighbourhood name to "Mimico" for the "Mimico (includes Humber Bay Shores)" neighbourhood for simplicity
-        if (name == "Mimico (includes Humber Bay Shores)"):
-            name = "Mimico"
-        else:
-            name = unique_hoods[i]
-        
         element["Neighbourhood"] = name
 
         crimesList = []
@@ -101,6 +107,7 @@ def neighbourhood_data():
         element["crimes"] = crimesList
         element["crime_numbers"] = numberOfCrimes
 
+        # loop through the main data and add info to each dict/append to new list
         for j in range(len(main_data)):
 
             if (main_data[j]["Neighbourhood Name"] == name):
