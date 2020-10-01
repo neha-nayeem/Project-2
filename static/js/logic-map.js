@@ -82,7 +82,7 @@ function createMarkers(crimeData) {
                     // store the neighbourhood name property
                     var areaName = feature.properties.AREA_NAME;
 
-                    // format the name by trimming the neighbourhood ID from the end of the string
+                    // format the name by trimming the neighbourhood ID from the end of the string (to match plot data)
                     areaName = areaName.slice(0, areaName.indexOf("("));
                     areaName = areaName.trimEnd();
 
