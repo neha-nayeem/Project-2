@@ -221,7 +221,7 @@ function makeResponsive() {
     // Margins
     var margin = {
         top: 50,
-        right: 110,
+        right: 130,
         bottom: 120,
         left: 150
     };
@@ -296,8 +296,8 @@ function makeResponsive() {
         var xScale = d3.scaleLinear().range([0, chartWidth]);
         var yScale = d3.scaleLinear().range([chartHeight, 0]);
 
-        xScale.domain(domainX(plotData, xAxisFactor));
-        yScale.domain(domainY(plotData, yAxisFactor));
+        xScale.domain(domainX(plotData, xAxisFactor)).nice();
+        yScale.domain(domainY(plotData, yAxisFactor)).nice();
 
         // Create Axes
         // =============================================
@@ -411,7 +411,7 @@ function makeResponsive() {
                 xAxisFactor = xAxisValue;
 
                 // Create new xScale domain
-                xScale.domain(domainX(plotData, xAxisFactor));
+                xScale.domain(domainX(plotData, xAxisFactor)).nice();
 
                 // Update xAxis with new scale
                 updateXAxis(xScale, xAxis);
@@ -420,7 +420,6 @@ function makeResponsive() {
                 updatePlot(circlesGroup, idLabels, xScale, yScale, xAxisFactor, yAxisFactor);
                 updateTooltip(xAxisFactor, yAxisFactor, circlesGroup, idLabels);
             }
-
 
             // switch statement to update clicked label to active and others to inactive
             switch (xAxisFactor) {
@@ -459,7 +458,7 @@ function makeResponsive() {
                 yAxisFactor = yAxisValue;
 
                 // Create new yScale domain
-                yScale.domain(domainY(plotData, yAxisFactor));
+                yScale.domain(domainY(plotData, yAxisFactor)).nice();
 
                 // Update yAxis with new scale
                 updateYAxis(yScale, yAxis);
